@@ -41,17 +41,16 @@ with open(cvspath, newline="") as csvfile:
     monthly_profits = profit1
 
     month_to_month = (avg_changes/total_months)
-    
+
     #rounding out the decimal if needed 
     month_to_month = str(round(month_to_month,2))
-
-    #profit losses
-    #loss = int(row[1]) - netp
 
     #some kind of mess
     #
     # greatest increase in profits
     # greatest decrease in profits
+    incprof = max(monthly_changesList)
+    decprof = min(monthly_changesList)
     
 
 
