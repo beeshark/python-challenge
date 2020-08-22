@@ -66,8 +66,8 @@ print("------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_profit}")
 print(f"Average Change: ${month_to_month}")
-print(f"Greatest Increase in Profits: {incdate} + ${incprof}")
-print(f"Greatest Decrease in Profits: {decdate} + ${decprof}")
+print(f"Greatest Increase in Profits: {incdate} ${incprof}")
+print(f"Greatest Decrease in Profits: {decdate} ${decprof}")
 
 # export to text file
 with open('financial_analysis.txt', 'w') as text:
@@ -76,5 +76,5 @@ with open('financial_analysis.txt', 'w') as text:
   text.write(f"Total Months: {total_months}\n")
   text.write(f"Total: ${net_profit}\n")
   text.write(f"Average Change: ${month_to_month}\n")
-  text.write(f"Greatest Increase in Profits: {incdate} + ${incprof}\n")
-  text.write(f"Greatest Decrease in Profits: {decdate} + ${decprof}\n")
+  text.write(f"Greatest Increase in Profits: {incdate} ${incprof}\n")
+  text.write(f"Greatest Decrease in Profits: {decdate} ${decprof}\n")
