@@ -51,6 +51,11 @@ with open(cvspath, newline="") as csvfile:
     # greatest decrease in profits
     incprof = max(monthly_changesList)
     decprof = min(monthly_changesList)
+
+    incdate = datesList[monthly_changesList.index(incprof)]
+    decdate = datesList[monthly_changesList.index(decprof)]
+
+
     
 
 
@@ -61,7 +66,7 @@ print("------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_profit}")
 print(f"Average Change: ${month_to_month}")
-#print(f"Greatest Increase in Profits")
-#print(f"Greatest Decrease in Profits")
+print(f"Greatest Increase in Profits: {incdate} + ${incprof}")
+print(f"Greatest Decrease in Profits: {decdate} + ${decprof}")
 
 # export to text file
