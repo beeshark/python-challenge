@@ -10,7 +10,6 @@ cvspath = "/Users/Sara/Documents/GitHub/python-challenge/PyBank/Resources/budget
 total_months = 0
 net_profit = 0
 monthly_profits = 0
-monthly_changes = 0
 avg_changes = 0
 
 #store lists to organize more
@@ -33,18 +32,24 @@ with open(cvspath, newline="") as csvfile:
     net_profit = net_profit + (int(row[1]))
 
     #month to month changes
+    profit1 = int(row[1])
+    monthly_changes = profit1 - monthly_profits
+
     monthly_changesList.append(monthly_changes)
 
-    #monthly_change = this_month's profit - last_month's
-    #then average that
-    #avg_changes = net_profits / total_months
-    #rounding out the decimal if needed = str(round(changes,2))
+    avg_changes = avg_changes + monthly_changes
+    monthly_profits = profit1
+
+    month_to_month = (avg_changes/total_months)
+    
+    #rounding out the decimal if needed 
+    month_to_month = str(round(month_to_month,2))
 
     #profit losses
     #loss = int(row[1]) - netp
 
     #some kind of mess
-    #llll
+    #
     # greatest increase in profits
     # greatest decrease in profits
     
@@ -56,7 +61,7 @@ print("Finanical Analysis")
 print("------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_profit}")
-print(f"Average Change: ${avg_changes}")
+print(f"Average Change: ${month_to_month}")
 #print(f"Greatest Increase in Profits")
 #print(f"Greatest Decrease in Profits")
 
