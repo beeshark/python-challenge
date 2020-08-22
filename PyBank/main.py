@@ -9,32 +9,31 @@ cvspath = "/Users/Sara/Documents/GitHub/python-challenge/PyBank/Resources/budget
 #store data and variables
 total_months = 0
 net_profit = 0
-changes = 0
+monthly_profits = 0
+monthly_changes = 0
 avg_changes = 0
 
 #store lists to organize more
-dates = []
-monthly_changes = []
-profits = []
+datesList = []
+monthly_changesList = []
+profitsList = []
 
 with open(cvspath, newline="") as csvfile:
   csvreader = csv.reader(csvfile, delimiter=",")
-  csv_header = next(csvfile)
-  row = next(csvreader)
+  csv_header = next(csvreader)
 
 # loops
   for row in csvreader:
-    #months
-    dates.append(row[0])
-    total_months = len(dates) + 1
+    #
+    total_months = total_months + 1
+    datesList.append(row[0])
 
     # net total of profit/losses
-   # profits.append(row[1])
-    #net_profit = net_profit + (int(row[1]))
+    profitsList.append(row[1])
+    net_profit = net_profit + (int(row[1]))
 
     #month to month changes
-    #changes
-    #monthly_changes.append(changes)
+    monthly_changesList.append(monthly_changes)
 
     #avg of changes
     #changes = net_profits / total_months
