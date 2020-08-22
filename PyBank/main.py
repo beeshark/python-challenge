@@ -70,3 +70,11 @@ print(f"Greatest Increase in Profits: {incdate} + ${incprof}")
 print(f"Greatest Decrease in Profits: {decdate} + ${decprof}")
 
 # export to text file
+with open('financial_analysis.txt', 'w') as text:
+  text.write("Finanical Analysis\n")
+  text.write("------------------------------------------\n")
+  text.write(f"Total Months: {total_months}\n")
+  text.write(f"Total: ${net_profit}\n")
+  text.write(f"Average Change: ${month_to_month}\n")
+  text.write(f"Greatest Increase in Profits: {incdate} + ${incprof}\n")
+  text.write(f"Greatest Decrease in Profits: {decdate} + ${decprof}\n")
