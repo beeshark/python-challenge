@@ -1,2 +1,2 @@
-# python-challenge :D
-ahhhh
+# python-challenge
+This is the homework.
