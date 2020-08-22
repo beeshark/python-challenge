@@ -28,16 +28,17 @@ with open(cvspath, newline="") as csvfile:
     total_months = total_months + 1
     datesList.append(row[0])
 
-    # net total of profit/losses
+    #
     profitsList.append(row[1])
     net_profit = net_profit + (int(row[1]))
 
     #month to month changes
     monthly_changesList.append(monthly_changes)
 
-    #avg of changes
-    #changes = net_profits / total_months
-    #changes = str(round(changes,2))
+    #monthly_change = this_month's profit - last_month's
+    #then average that
+    #avg_changes = net_profits / total_months
+    #rounding out the decimal if needed = str(round(changes,2))
 
     #profit losses
     #loss = int(row[1]) - netp
@@ -60,6 +61,3 @@ print(f"Average Change: ${avg_changes}")
 #print(f"Greatest Decrease in Profits")
 
 # export to text file
-
-
-# the printed stuff looks different from the example given so im not sure if i did this right
