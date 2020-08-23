@@ -46,15 +46,24 @@ with open(cvspath, newline="") as csvfile:
 
 #print here
 
-
-#output to text file here
-
 print("Election Results")
 print("----------------------------")
 print(f"Total Votes: {vote_tally}")
-for i in range(len(indv_candidate)):
-    print(f"{indv_candidate[i]}: {vote_percent[i]}% ({ccount[i]})")
+#for i in range(len(indv_candidate)):
+    #print(f"{indv_candidate[i]}: {vote_percent[i]}% ({ccount[i]})")
     #said list index oout of range. not sure how to fix
 print("----------------------------")
 #print(f"Winner: {winner}")
 print("----------------------------")
+
+#output to text file
+with open('election_results.txt', 'w') as text:
+  text.write("Election Results\n")
+  text.write("----------------------------\n")
+  text.write(f"Total Votes: {vote_tally}\n")
+#for i in range(len(indv_candidate)):
+    #print(f"{indv_candidate[i]}: {vote_percent[i]}% ({ccount[i]})")
+  text.write("said list index and string index out of range. not sure how to fix\n")
+  text.write("----------------------------\n")
+  text.write("Winner:\n")
+  text.write("----------------------------\n")

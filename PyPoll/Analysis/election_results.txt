@@ -1,0 +1,7 @@
+Election Results
+----------------------------
+Total Votes: 3521001
+said list index and string index out of range. not sure how to fix
+----------------------------
+Winner:
+----------------------------
